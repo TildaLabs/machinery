@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/RichardKnop/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/signatures"
 )
 
 type EagerBroker struct {

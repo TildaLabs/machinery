@@ -4,8 +4,8 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/RichardKnop/machinery/v1/signatures"
-	"github.com/RichardKnop/machinery/v1/utils"
+	"github.com/TildaLabs/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/utils"
 )
 
 // AsyncResult represents a task result

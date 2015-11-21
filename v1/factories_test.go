@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/RichardKnop/machinery/v1/backends"
-	"github.com/RichardKnop/machinery/v1/brokers"
-	"github.com/RichardKnop/machinery/v1/config"
+	"github.com/TildaLabs/machinery/v1/backends"
+	"github.com/TildaLabs/machinery/v1/brokers"
+	"github.com/TildaLabs/machinery/v1/config"
 )
 
 func TestBrokerFactory(t *testing.T) {

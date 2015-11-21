@@ -1,7 +1,7 @@
 package backends
 
 import (
-	"github.com/RichardKnop/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/signatures"
 )
 
 const (

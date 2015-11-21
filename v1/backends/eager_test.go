@@ -3,7 +3,7 @@ package backends
 import (
 	"testing"
 
-	"github.com/RichardKnop/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/signatures"
 	"github.com/stretchr/testify/suite"
 )
 

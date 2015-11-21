@@ -7,9 +7,9 @@ import (
 	"log"
 	"sync"
 
-	"github.com/RichardKnop/machinery/v1/config"
-	"github.com/RichardKnop/machinery/v1/signatures"
-	"github.com/RichardKnop/machinery/v1/utils"
+	"github.com/TildaLabs/machinery/v1/config"
+	"github.com/TildaLabs/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/utils"
 	"github.com/streadway/amqp"
 )
 

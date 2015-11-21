@@ -6,9 +6,9 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/RichardKnop/machinery/v1/backends"
-	"github.com/RichardKnop/machinery/v1/signatures"
-	"github.com/RichardKnop/machinery/v1/utils"
+	"github.com/TildaLabs/machinery/v1/backends"
+	"github.com/TildaLabs/machinery/v1/signatures"
+	"github.com/TildaLabs/machinery/v1/utils"
 )
 
 // Worker represents a single worker process

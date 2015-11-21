@@ -1,8 +1,8 @@
-[1]: https://raw.githubusercontent.com/RichardKnop/assets/master/machinery/example_worker.png
-[2]: https://raw.githubusercontent.com/RichardKnop/assets/master/machinery/example_worker_receives_tasks.png
+[1]: https://raw.githubusercontent.com/TildaLabs/assets/master/machinery/example_worker.png
+[2]: https://raw.githubusercontent.com/TildaLabs/assets/master/machinery/example_worker_receives_tasks.png
 
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg "GoDoc")](http://godoc.org/github.com/RichardKnop/machinery/v1)
-[![Build Status](https://travis-ci.org/RichardKnop/machinery.svg?branch=master "Build Status")](https://travis-ci.org/RichardKnop/machinery)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg "GoDoc")](http://godoc.org/github.com/TildaLabs/machinery/v1)
+[![Build Status](https://travis-ci.org/TildaLabs/machinery.svg?branch=master "Build Status")](https://travis-ci.org/TildaLabs/machinery)
 
 # Machinery
 
@@ -12,28 +12,28 @@ So called tasks (or jobs if you like) are executed concurrently either by many w
 
 This is an early stage project so far. Feel free to contribute.
 
-- [First Steps](https://github.com/RichardKnop/machinery#first-steps)
-- [Configuration](https://github.com/RichardKnop/machinery#configuration)
-- [Server](https://github.com/RichardKnop/machinery#server)
-- [Workers](https://github.com/RichardKnop/machinery#workers)
-- [Tasks](https://github.com/RichardKnop/machinery#tasks)
-    - [Registering Tasks](https://github.com/RichardKnop/machinery#registering-tasks)
-    - [Signatures](https://github.com/RichardKnop/machinery#signatures)
-    - [Supported Types](https://github.com/RichardKnop/machinery#supported-types)
-    - [Sending Tasks](https://github.com/RichardKnop/machinery#sending-tasks)
-    - [Keeping Results](https://github.com/RichardKnop/machinery#keeping-results)
-- [Workflows](https://github.com/RichardKnop/machinery#workflows)
-    - [Groups](https://github.com/RichardKnop/machinery#groups)
-    - [Chords](https://github.com/RichardKnop/machinery#chords)
-    - [Chains](https://github.com/RichardKnop/machinery#chains)
-- [Development Setup](https://github.com/RichardKnop/machinery#development-setup)
+- [First Steps](https://github.com/TildaLabs/machinery#first-steps)
+- [Configuration](https://github.com/TildaLabs/machinery#configuration)
+- [Server](https://github.com/TildaLabs/machinery#server)
+- [Workers](https://github.com/TildaLabs/machinery#workers)
+- [Tasks](https://github.com/TildaLabs/machinery#tasks)
+    - [Registering Tasks](https://github.com/TildaLabs/machinery#registering-tasks)
+    - [Signatures](https://github.com/TildaLabs/machinery#signatures)
+    - [Supported Types](https://github.com/TildaLabs/machinery#supported-types)
+    - [Sending Tasks](https://github.com/TildaLabs/machinery#sending-tasks)
+    - [Keeping Results](https://github.com/TildaLabs/machinery#keeping-results)
+- [Workflows](https://github.com/TildaLabs/machinery#workflows)
+    - [Groups](https://github.com/TildaLabs/machinery#groups)
+    - [Chords](https://github.com/TildaLabs/machinery#chords)
+    - [Chains](https://github.com/TildaLabs/machinery#chains)
+- [Development Setup](https://github.com/TildaLabs/machinery#development-setup)
 
 ## First Steps
 
 Add the Machinery library to your $GOPATH/src:
 
 ```
-$ go get github.com/RichardKnop/machinery
+$ go get github.com/TildaLabs/machinery
 ```
 
 Install dependencies:
@@ -95,7 +95,7 @@ Currently supported backends are:
 * Memcache (use Memcache URL such as `memcache://10.0.0.1:11211,10.0.0.2:11211`)
 * AMQP (use AMQP URL such as `amqp://guest:guest@localhost:5672/`)
 
-> Keep in mind AMQP is not recommended as a result backend. See [Keeping Results](https://github.com/RichardKnop/machinery#keeping-results)
+> Keep in mind AMQP is not recommended as a result backend. See [Keeping Results](https://github.com/TildaLabs/machinery#keeping-results)
 
 ### ResultsExpireIn
 
@@ -124,8 +124,8 @@ A Machinery library must be instantiated before use. The way this is done is by 
 ```go
 
 import (
-    "github.com/RichardKnop/machinery/v1/config"
-    machinery "github.com/RichardKnop/machinery/v1"
+    "github.com/TildaLabs/machinery/v1/config"
+    machinery "github.com/TildaLabs/machinery/v1"
 )
 
 var cnf = config.Config{
@@ -293,7 +293,7 @@ Machinery encodes tasks to JSON before sending them to the broker. Task results 
 Tasks can be called by passing an instance of `TaskSignature` to an `Server` instance. E.g:
 
 ```go
-import "github.com/RichardKnop/machinery/v1/signatures"
+import "github.com/TildaLabs/machinery/v1/signatures"
 
 task := signatures.TaskSignature{
     Name: "add",
@@ -394,8 +394,8 @@ Running a single asynchronous task is fine but often you will want to design a w
 
 ```go
 import (
-    "github.com/RichardKnop/machinery/v1/signatures"
-    machinery "github.com/RichardKnop/machinery/v1"
+    "github.com/TildaLabs/machinery/v1/signatures"
+    machinery "github.com/TildaLabs/machinery/v1"
 )
 
 task1 := signatures.TaskSignature{
@@ -453,8 +453,8 @@ for _, asyncResult := range asyncResults {
 
 ```go
 import (
-    "github.com/RichardKnop/machinery/v1/signatures"
-    machinery "github.com/RichardKnop/machinery/v1"
+    "github.com/TildaLabs/machinery/v1/signatures"
+    machinery "github.com/TildaLabs/machinery/v1"
 )
 
 task1 := signatures.TaskSignature{
@@ -527,8 +527,8 @@ fmt.Println(result.Interface())
 
 ```go
 import (
-    "github.com/RichardKnop/machinery/v1/signatures"
-    machinery "github.com/RichardKnop/machinery/v1"
+    "github.com/TildaLabs/machinery/v1/signatures"
+    machinery "github.com/TildaLabs/machinery/v1"
 )
 
 task1 := signatures.TaskSignature{
